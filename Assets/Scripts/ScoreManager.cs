@@ -6,21 +6,14 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI scoreText;
-    [SerializeField] TextMeshProUGUI perSecondText;
-    [SerializeField] TextMeshProUGUI upgradePrice;
-    [SerializeField] TextMeshProUGUI amountOfUpgradesText;
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI perSecondText;
 
-    [SerializeField] float buyPrice;
-
-    float score;
-    float productionPerSecond;
-    float amountOfUpgrades;
+    public float score;
+    public float productionPerSecond;
 
     void Start()
     {
-        score = 0;
-        productionPerSecond = 0;
         InvokeRepeating("NewScore", 0f, 1f);
     }
 
@@ -31,9 +24,9 @@ public class ScoreManager : MonoBehaviour
         scoreText.text = score.ToString();
     }
 
-    void AddProductionPerSecond()
+    public void AddProductionPerSecond(int howMuchMorePerSecond)
     {
-        productionPerSecond++;
+        productionPerSecond = productionPerSecond + howMuchMorePerSecond;
 
         perSecondText.text = productionPerSecond.ToString();
     }
@@ -43,24 +36,5 @@ public class ScoreManager : MonoBehaviour
         score++;
 
         scoreText.text = score.ToString();
-    }
-
-    public void Upgrade()
-    {
-        if (score >= buyPrice)
-        {
-            score = score - buyPrice;
-
-            buyPrice = Mathf.Round(buyPrice * 1.2f);
-
-            scoreText.text = score.ToString();
-
-            upgradePrice.text = buyPrice.ToString();
-
-            amountOfUpgrades++;
-            amountOfUpgradesText.text = amountOfUpgrades.ToString();
-
-            AddProductionPerSecond();
-        }
     }
 }
