@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class SpecialUpgrade : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] GameObject specialUpgrade;
 
-    // Update is called once per frame
-    void Update()
+    Upgrades upgrades;
+
+    public void Start()
     {
-        
+        upgrades = GetComponent<Upgrades>();
     }
 }
