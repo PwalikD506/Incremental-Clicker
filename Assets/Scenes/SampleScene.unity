@@ -1222,8 +1222,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -257.2, y: -191.6}
-  m_SizeDelta: {x: 527.71, y: 341.5}
+  m_AnchoredPosition: {x: 116.3, y: 0}
+  m_SizeDelta: {x: 243.86, y: 638.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &464115482
 MonoBehaviour:
@@ -1954,7 +1954,7 @@ MonoBehaviour:
   upgradedPrice: {fileID: 1706092359}
   amountOfUpgradesText: {fileID: 1314628803}
   buyPrice: 1000
-  howMuchMorePerSecond: 10
+  howMuchMorePerSecond: 1
   scoreManager: {fileID: 24616123}
 --- !u!114 &1124067899
 MonoBehaviour:
