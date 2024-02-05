@@ -17,11 +17,6 @@ public class Upgrades : MonoBehaviour
     float amountOfUpgrades;
     bool initializedValue = true;
 
-    private void FixedUpdate()
-    {
-
-    }
-
     public void Upgrade(float originalCost)
     {
         if(initializedValue)
