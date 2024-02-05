@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class ScoreManager : MonoBehaviour
     void Start()
     {
         InvokeRepeating("NewScore", 0f, 1f);
+
     }
 
     void NewScore()
